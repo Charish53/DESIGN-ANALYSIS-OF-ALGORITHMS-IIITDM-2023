@@ -1,3 +1,9 @@
+/*
+6. There are n people standing in a circle in an order 1 to n. Assume that person i has a sword. He kills
+the next person (i + 1) and gives the sword to the next (i + 2). All people do the same until only 1
+person survives. Which number survives at the last ? Present an efficient solution which will return
+the ’survivor’
+*/
 #include <bits/stdc++.h>
 using namespace std;
 int main()
