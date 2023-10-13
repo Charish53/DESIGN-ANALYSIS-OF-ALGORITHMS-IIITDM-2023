@@ -1,4 +1,4 @@
-/*Let A be an array of size n filled with distinct integers from the set
+/*QUESTION 3:Let A be an array of size n filled with distinct integers from the set
 S = {0, 1, . . . , n}. How efficiently can you return the missing integer.
 (exactly one element of S is missing in A).*/
 #include<stdio.h>
