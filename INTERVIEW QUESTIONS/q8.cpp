@@ -1,3 +1,9 @@
+/*
+8. Given an array of N non-negative integers array A representing an elevation map (bar chart) where
+the width of each bar is 1, compute how much water it can store.
+Example: Input arr[] = 0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1, Output: 6.
+Trap “1 unit” between first 1 and 2, “4 units” between first 2 and 3 and “1 unit” between second last
+1 and last 2*/
 #include <bits/stdc++.h> 
 using namespace std; 
 int findWater(int arr[], int n) 
