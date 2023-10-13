@@ -1,0 +1,45 @@
+/*You are given an infinite array with the property that the array is
+filled with meaningful integers until some location and it is filled
+with infinity thereafter. What is the minimum number of steps
+(comparisons) required to identify the location of the first infinity.*/
+#include<stdio.h>
+int count;
+int check(int arr[])
+{
+   int v1=0,v2=1; 
+   while(arr[v2]!=0)
+   {
+       count++;
+       v1=v2;
+       v2=v2*2;
+   }
+   while(v1<=v2)
+   {
+       int mid=v1+(v2-v1)/2;
+       if(arr[mid]==0)
+       {
+       v2=mid-1;
+       count++;
+       }
+       else
+       {
+       count++;
+       v1=mid+1;
+       }
+   }
+   return count;
+}
+int main()
+{
+    int n,i;
+    int arr[100000];
+    printf("enter n");
+    scanf("%d",&n);
+    for(i=0;i<n;i++)
+    scanf("%d",&arr[i]);
+    for(i=n;i<=100000;i++)
+    arr[i]=0;
+    count=check(arr);
+    printf("%d ",count);
+    return 0;
+}
