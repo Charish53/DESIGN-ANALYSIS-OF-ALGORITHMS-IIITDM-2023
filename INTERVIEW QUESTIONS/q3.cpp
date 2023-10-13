@@ -1,3 +1,5 @@
+/*3. Consider a ternary array A with elements 0, 1, and 2. The objective is to sort the array A in linear-time
+in place (no additional array).*/
 #include <iostream>
 using namespace std;
 void sort012(int arr[], int n)
