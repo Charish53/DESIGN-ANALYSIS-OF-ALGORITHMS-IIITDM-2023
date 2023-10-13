@@ -1,4 +1,4 @@
-/*Given an integer n, find (i) sum of the digits of n (ii) sum of the
+/*QUESTION 1:Given an integer n, find (i) sum of the digits of n (ii) sum of the
 distinct digits of n*/
 #include<stdio.h>
 int  sum(int n)
