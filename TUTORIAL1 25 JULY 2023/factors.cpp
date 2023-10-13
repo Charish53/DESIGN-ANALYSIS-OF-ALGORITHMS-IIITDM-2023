@@ -1,4 +1,4 @@
-/*Given an integer n, find (i) prime factors of n (ii) prime
+/* QUESTION 2:Given an integer n, find (i) prime factors of n (ii) prime
 factorization of n (iii) all factors (iv) sum of all factors*/
 #include <iostream>
 #include <vector>
