@@ -1,3 +1,6 @@
+/*5. Input : Two arrays A, B.
+Question : Find two indices i, j such that swapping A[i], B[j] makes the total sum of arrays equal, if
+exists.*/
 #include <bits/stdc++.h>
 using namespace std;
 void findSwapValues(int a[], int m, int b[], int n);
