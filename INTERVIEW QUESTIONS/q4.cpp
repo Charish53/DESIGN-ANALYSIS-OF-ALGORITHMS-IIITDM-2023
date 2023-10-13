@@ -1,3 +1,6 @@
+/*4. Input : An integer x and n × n integer matrix M in which the entries of each row and each column
+are in increasing order.
+Question : Find the position of x in M if exists.*/
 #include <bits/stdc++.h>
 using namespace std;
 #define n 5
