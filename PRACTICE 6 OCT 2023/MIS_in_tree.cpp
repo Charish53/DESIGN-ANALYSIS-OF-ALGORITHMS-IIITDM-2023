@@ -1,27 +1,54 @@
 /*implement maximum independent set in a tree*/
 #include <bits/stdc++.h>
-using namespace std;
-int lcs(string X, string Y, int m, int n)
-{
-	int L[m + 1][n + 1];
-	for (int i = 0; i <= m; i++) {
-		for (int j = 0; j <= n; j++) {
-			if (i == 0 || j == 0)
-				L[i][j] = 0;
-			else if (X[i - 1] == Y[j - 1])
-				L[i][j] = L[i - 1][j - 1] + 1;
-			else
-				L[i][j] = max(L[i - 1][j], L[i][j - 1]);
-		}
-	}
-	return L[m][n];
-}
-int main()
-{
-	string S1 = "AGGTAB";
-	string S2 = "GXTXAYB";
-	int m = S1.size();
-	int n = S2.size();
-	cout << "Length of LCS is " << lcs(S1, S2, m, n);
-	return 0;
-}
+using namespace std; 
+int max(int x, int y) 
+{ 
+	return (x > y) ? x : y; 
+} 
+class node 
+{ 
+	public:
+	int data; 
+	node *left, *right; 
+}; 
+int LISS(node *root) 
+{ 
+	if (root == NULL) 
+	return 0; 
+	int size_excl = LISS(root->left) + 
+					LISS(root->right); 
+	int size_incl = 1; 
+	if (root->left) 
+		size_incl += LISS(root->left->left) +
+					LISS(root->left->right); 
+	if (root->right) 
+		size_incl += LISS(root->right->left) + 
+					LISS(root->right->right); 
+	return max(size_incl, size_excl); 
+} 
+node* newNode( int data ) 
+{ 
+	node* temp = new node();
+	temp->data = data; 
+	temp->left = temp->right = NULL; 
+	return temp; 
+} 
+int main() 
+{ 
+	node *root = newNode(20); 
+	root->left = newNode(8); 
+	root->left->left = newNode(4); 
+	root->left->right = newNode(12); 
+	root->left->right->left = newNode(10); 
+	root->left->right->right = newNode(14); 
+	root->right = newNode(22); 
+	root->right->right = newNode(25); 
+
+	cout << "Size of the Largest"
+		<< " Independent Set is "
+		<< LISS(root); 
+
+	return 0; 
+} 
+
+
