@@ -1,1 +1,0 @@
-Suppose, each denominations has a cap, i.e., l_i denotes the maximum number of coins available for the denomination d_i.   Solve COIN-CHANGE with this constraint.
